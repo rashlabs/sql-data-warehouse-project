@@ -14,11 +14,10 @@ All data in the database will permanently deleted.Proceed with cautions and
 ensure you have proper backupsbefore running this scripts.
 ********************************************************************************
 
-CODES:
 -- Connect to the postgres administrative database for DB-level operations
 \c postgres
 
--- 1. Drop the database if it exists, then create it a new
+-- 1. Drop the database if it exists, then create it anew
 DO $$
 BEGIN
    IF EXISTS (SELECT 1 FROM pg_database WHERE datname = 'datawarehouse') THEN
